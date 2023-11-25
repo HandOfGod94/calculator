@@ -18,5 +18,17 @@ describe Calculator::App do
     it "subtracts numbers when operator is -" do
       Calculator::App.run(1, 2, "-").should eq(-1)
     end
+
+    it "multiplies numbers when operator is *" do
+      Calculator::App.run(1, 2, "*").should eq(2)
+    end
+
+    it "divides numbers when operator is /" do
+      Calculator::App.run(1, 2, "/").should eq(0.5)
+    end
+
+    it "raises error when operator is not supported" do
+      expect_raises(Calculator::InvalidOperatorException) { Calculator::App.run(1, 2, "x") }
+    end
   end
 end

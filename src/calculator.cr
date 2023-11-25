@@ -35,11 +35,9 @@ end
 parser.parse
 
 if version
-  result = Calculator::VERSION
+  puts Calculator::VERSION
 elsif run
-  result = Calculator::App.run(operand1, operand2, operator)
+  puts Calculator::App.run(operand1, operand2, operator)
 else
   result = parser
 end
-
-puts result
