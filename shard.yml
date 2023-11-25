@@ -1,0 +1,13 @@
+name: calculator
+version: 0.1.0
+
+authors:
+  - Gahan Rakholia <gahan94rakh@gmail.com>
+
+targets:
+  calculator:
+    main: src/calculator.cr
+
+crystal: '>= 1.10.1'
+
+license: MIT
