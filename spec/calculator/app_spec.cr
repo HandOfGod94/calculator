@@ -9,4 +9,14 @@ describe Calculator::App do
   context "subtracting numbers" do
     it { Calculator::App.new(1, 2).subtract.should eq(-1) }
   end
+
+  context ".run" do
+    it "adds numbers when operator is +" do
+      Calculator::App.run(1, 2, "+").should eq(3)
+    end
+
+    it "subtracts numbers when operator is -" do
+      Calculator::App.run(1, 2, "-").should eq(-1)
+    end
+  end
 end
